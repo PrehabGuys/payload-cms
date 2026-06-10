@@ -53,7 +53,7 @@ export default buildConfig({
   },
   collections: [Users, Media, Subprocessors],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET || 'xyz_temporary_build_secret_placeholder_xyz',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
