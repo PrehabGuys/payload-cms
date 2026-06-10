@@ -1,5 +1,10 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 
+// FORCE the build fallback directly into the process environment
+if (!process.env.PAYLOAD_SECRET) {
+  process.env.PAYLOAD_SECRET = 'temporary_build_secret_placeholder_32_chars_long'
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
